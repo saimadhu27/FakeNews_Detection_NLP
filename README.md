@@ -11,9 +11,12 @@ Dataset columns:
 3. subject - The subject of the article
 4. date - The date at which the article was posted
 5. category - 0: indicating its a fake news, 1: indicating it's a geniuine news.
+
 ## Approach:
 * When we plot our y variable which is category, the count of both the categories are almost equal, indicating that it is a balanced dataset.
 * Combined the title into text column, to perform all the preprocessing steps on this.
 * Performed preprocessing steps like tokenisation, stopwords, lemmatization using the NLTK library.
 * I have used trigram CountVectorizer and then trained a Multinomial Naive Bayes algorithm on the data.
 * Using this machine learning model I have achieved an accuracy of 97%.
+* I have also tried the word2vec from gensim library which turns the words into embeddings.
+* After that, I have implemented the Gradient Boosting Classifier and achieved an accuracy of 80.3%
